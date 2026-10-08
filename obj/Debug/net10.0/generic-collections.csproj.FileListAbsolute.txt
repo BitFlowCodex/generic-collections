@@ -1,0 +1,15 @@
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/bin/Debug/net10.0/generic-collections
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/bin/Debug/net10.0/generic-collections.deps.json
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/bin/Debug/net10.0/generic-collections.runtimeconfig.json
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/bin/Debug/net10.0/generic-collections.dll
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/bin/Debug/net10.0/generic-collections.pdb
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/obj/Debug/net10.0/generic-collections.GeneratedMSBuildEditorConfig.editorconfig
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/obj/Debug/net10.0/generic-collections.AssemblyInfoInputs.cache
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/obj/Debug/net10.0/generic-collections.AssemblyInfo.cs
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/obj/Debug/net10.0/generic-collections.csproj.CoreCompileInputs.cache
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/obj/Debug/net10.0/generic-collections.sourcelink.json
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/obj/Debug/net10.0/generic-collections.dll
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/obj/Debug/net10.0/refint/generic-collections.dll
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/obj/Debug/net10.0/generic-collections.pdb
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/obj/Debug/net10.0/generic-collections.genruntimeconfig.cache
+/home/jack/Documents/learn-new-stuff/labs/generic-collections/obj/Debug/net10.0/ref/generic-collections.dll
