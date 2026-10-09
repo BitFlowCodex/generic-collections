@@ -2,7 +2,8 @@
 
 class Program
 {
-    private static Stack<Employee> employees = new Stack<Employee>();
+    private static Stack<Employee> employeesStack = new Stack<Employee>();
+    private static List<Employee> employeesList = new List<Employee>();
 
     static void Main(string[] args)
     {
@@ -41,50 +42,51 @@ class Program
             salary: 8540.2
         );
 
-        employees.Push(employee1);
-        employees.Push(employee2);
-        employees.Push(employee3);
-        employees.Push(employee4);
-        employees.Push(employee5);
+        // Del 1
+        employeesStack.Push(employee1);
+        employeesStack.Push(employee2);
+        employeesStack.Push(employee3);
+        employeesStack.Push(employee4);
+        employeesStack.Push(employee5);
 
         Console.WriteLine("-------------------------------------------");
 
-        foreach (Employee employee in employees)
+        foreach (Employee employee in employeesStack)
         {
-            Console.WriteLine($"Id: {employee.Id}, Name: {employee.Name}, Gender: {employee.Gender}, Salary: {employee.Salary}");
-            Console.WriteLine($"Items left in the Stack = {employees.Count}");
+            PrintEmployee(employee);
+            Console.WriteLine($"Items left in the Stack = {employeesStack.Count}");
         }
 
         Console.WriteLine("-------------------------------------------");
 
-        while (employees.Count > 0)
+        while (employeesStack.Count > 0)
         {
-            Employee employee = employees.Pop();
+            Employee employee = employeesStack.Pop();
 
-            Console.WriteLine($"Name: {employee.Name}, Gender: {employee.Gender}, Salary: {employee.Salary}");
-            Console.WriteLine($"Items left in the Stack = {employees.Count}");
+            PrintEmployee(employee);
+            Console.WriteLine($"Items left in the Stack = {employeesStack.Count}");
 
         }
 
-        employees.Push(employee1);
-        employees.Push(employee2);
-        employees.Push(employee3);
-        employees.Push(employee4);
-        employees.Push(employee5);
+        employeesStack.Push(employee1);
+        employeesStack.Push(employee2);
+        employeesStack.Push(employee3);
+        employeesStack.Push(employee4);
+        employeesStack.Push(employee5);
 
         Console.WriteLine("-------------------------------------------");
 
-        Employee employeePeek1 = employees.Peek();
-        Console.WriteLine($"Name: {employeePeek1.Name}, Gender: {employeePeek1.Gender}, Salary: {employeePeek1.Salary}");
-        Console.WriteLine($"Items left in the Stack = {employees.Count}");
+        Employee employeePeek1 = employeesStack.Peek();
+        PrintEmployee(employeePeek1);
+        Console.WriteLine($"Items left in the Stack = {employeesStack.Count}");
 
-        Employee employeePeek2 = employees.Peek();
-        Console.WriteLine($"Name: {employeePeek2.Name}, Gender: {employeePeek2.Gender}, Salary: {employeePeek2.Salary}");
-        Console.WriteLine($"Items left in the Stack = {employees.Count}");
+        Employee employeePeek2 = employeesStack.Peek();
+        PrintEmployee(employeePeek2);
+        Console.WriteLine($"Items left in the Stack = {employeesStack.Count}");
 
         Console.WriteLine("-------------------------------------------");
 
-        if (employees.Contains(employee3))
+        if (employeesStack.Contains(employee3))
         {
             Console.WriteLine("Emp3 is in stack");
         }
@@ -92,5 +94,47 @@ class Program
         {
             Console.WriteLine("Emp3 is not in stack");
         }
+
+        Console.WriteLine("-------------------------------------------");
+        Console.WriteLine("-------------------------------------------");
+
+        // Del 2
+        employeesList.Add(employee1);
+        employeesList.Add(employee2);
+        employeesList.Add(employee3);
+        employeesList.Add(employee4);
+        employeesList.Add(employee5);
+
+        if (employeesList.Contains(employee2))
+        {
+            Console.WriteLine($"Employee2 object exists in the list");
+        }
+        else
+        {
+            Console.WriteLine($"Employee2 object does not exist in the list");
+        }
+
+        Console.WriteLine("-------------------------------------------");
+
+        Employee? maleEmployee = employeesList.Find(value => value.Gender == "Male");
+
+        if (maleEmployee != null)
+        {
+            PrintEmployee(maleEmployee);
+        }
+
+        Console.WriteLine("-------------------------------------------");
+
+        List<Employee> allMaleEmployees = employeesList.FindAll(value => value.Gender == "Male");
+
+        foreach (Employee employee in allMaleEmployees)
+        {
+            PrintEmployee(employee);
+        }
+    }
+
+    static void PrintEmployee(Employee employee)
+    {
+        Console.WriteLine($"ID = {employee.Id}, Name = {employee.Name}, Gender = {employee.Gender}, Salary = {employee.Salary}");
     }
 }
