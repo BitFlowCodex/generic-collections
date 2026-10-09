@@ -47,13 +47,50 @@ class Program
         employees.Push(employee4);
         employees.Push(employee5);
 
-        foreach (var employee in employees)
+        Console.WriteLine("-------------------------------------------");
+
+        foreach (Employee employee in employees)
         {
-            System.Console.WriteLine(employee.Id);
-            System.Console.WriteLine(employee.Name);
-            System.Console.WriteLine(employee.Gender);
-            System.Console.WriteLine(employee.Salary);
-            System.Console.WriteLine("\n");
+            Console.WriteLine($"Id: {employee.Id}, Name: {employee.Name}, Gender: {employee.Gender}, Salary: {employee.Salary}");
+            Console.WriteLine($"Items left in the Stack = {employees.Count}");
+        }
+
+        Console.WriteLine("-------------------------------------------");
+
+        while (employees.Count > 0)
+        {
+            Employee employee = employees.Pop();
+
+            Console.WriteLine($"Name: {employee.Name}, Gender: {employee.Gender}, Salary: {employee.Salary}");
+            Console.WriteLine($"Items left in the Stack = {employees.Count}");
+
+        }
+
+        employees.Push(employee1);
+        employees.Push(employee2);
+        employees.Push(employee3);
+        employees.Push(employee4);
+        employees.Push(employee5);
+
+        Console.WriteLine("-------------------------------------------");
+
+        Employee employeePeek1 = employees.Peek();
+        Console.WriteLine($"Name: {employeePeek1.Name}, Gender: {employeePeek1.Gender}, Salary: {employeePeek1.Salary}");
+        Console.WriteLine($"Items left in the Stack = {employees.Count}");
+
+        Employee employeePeek2 = employees.Peek();
+        Console.WriteLine($"Name: {employeePeek2.Name}, Gender: {employeePeek2.Gender}, Salary: {employeePeek2.Salary}");
+        Console.WriteLine($"Items left in the Stack = {employees.Count}");
+
+        Console.WriteLine("-------------------------------------------");
+
+        if (employees.Contains(employee3))
+        {
+            Console.WriteLine("Emp3 is in stack");
+        }
+        else
+        {
+            Console.WriteLine("Emp3 is not in stack");
         }
     }
 }
